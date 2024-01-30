@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Outlook Web Add-in</title>
-    <link rel="stylesheet" type="text/css" href="taskpane.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="content">
-        <h1>Your Outlook Web Add-in</h1>
-        <form id="apiForm">
-            <label for="dropdown1">Dropdown 1:</label>
-            <select id="dropdown1"></select>
-            <br>
-            <label for="dropdown2">Dropdown 2:</label>
-            <select id="dropdown2"></select>
-            <br>
-            <button type="button" onclick="getData()">Get Data</button>
-        </form>
-    </div>
-    <script type="text/javascript" src="taskpane.js"></script>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
