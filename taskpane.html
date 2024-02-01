@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Form</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/FOOllie/FOAddIn/main/taskpane.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Parser</title>
+  <style>
+    #dropBox {
+      width: 300px;
+      height: 200px;
+      border: 2px dashed #ccc;
+      text-align: center;
+      padding: 20px;
+      margin: 20px auto;
+    }
+  </style>
 </head>
 <body>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-		<br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-		<br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-		<br>
-        <button type="submit">Submit</button>
-    </form>
+
+  <div id="dropBox" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+    Drop an email here
+  </div>
+
+  <div id="parsedContent">
+    <h2>Parsed Content:</h2>
+    <p id="sender"></p>
+    <p id="subject"></p>
+    <p id="body"></p>
+  </div>
+
+  <script>
+    function dragOverHandler(event) {
+      event.preventDefault();
+    }
+
+    function dropHandler(event) {
+      event.preventDefault();
+
+      const files = event.dataTransfer.files;
+
+      if (files.length > 0) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          const emailContent = e.target.result;
+
+          // Call a function to parse the email content
+          parseEmail(emailContent);
+        };
+
+        reader.readAsText(files[0]);
+      }
+    }
+
+    function parseEmail(emailContent) {
+      // Assume emailContent is in JSON format for simplicity
+      const emailData = JSON.parse(emailContent);
+
+      // Display parsed content on the page
+      document.getElementById("sender").innerHTML = `Sender: ${emailData.sender}`;
+      document.getElementById("subject").innerHTML = `Subject: ${emailData.subject}`;
+      document.getElementById("body").innerHTML = `Body: ${emailData.body}`;
+    }
+  </script>
 </body>
 </html>
