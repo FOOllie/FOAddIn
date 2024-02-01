@@ -9,8 +9,8 @@
 	<DefaultLocale>en-US</DefaultLocale>
 	<DisplayName DefaultValue="FO Attachment"/>
 	<Description DefaultValue="A simple hello world Office Add-in."/>
-	<IconUrl DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/FO%20Add%20In/assets/icon-32.png?raw=true"/>
-	<HighResolutionIconUrl DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/FO%20Add%20In/assets/icon-80.png?raw=true"/>
+	<IconUrl DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/assets/icon-32.png?raw=true"/>
+	<HighResolutionIconUrl DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/assets/icon-80.png?raw=true"/>
 	<SupportUrl DefaultValue="https://learn.microsoft.com/office/dev/add-ins/overview/office-add-in-code-samples"/>
 	<AppDomains>
 		<AppDomain>https://www.forwardsolutions.co.uk</AppDomain>
@@ -26,7 +26,7 @@
 	<FormSettings>
 		<Form xsi:type="ItemRead">
 			<DesktopSettings>
-				<SourceLocation DefaultValue="https://raw.githubusercontent.com/FOOllie/FOAddIn/main/FO%20Add%20In/taskpane.html"/>
+				<SourceLocation DefaultValue="https://raw.githubusercontent.com/FOOllie/FOAddIn/main/taskpane.html"/>
 				<RequestedHeight>250</RequestedHeight>
 			</DesktopSettings>
 		</Form>
@@ -75,12 +75,12 @@
 		</Hosts>
 		<Resources>
 			<bt:Images>
-				<bt:Image id="Icon.16x16" DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/FO%20Add%20In/assets/icon-16.png?raw=true"/>
-				<bt:Image id="Icon.32x32" DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/FO%20Add%20In/assets/icon-32.png?raw=true"/>
-				<bt:Image id="Icon.80x80" DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/FO%20Add%20In/assets/icon-80.png?raw=true"/>
+				<bt:Image id="Icon.16x16" DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/assets/icon-16.png?raw=true"/>
+				<bt:Image id="Icon.32x32" DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/assets/icon-32.png?raw=true"/>
+				<bt:Image id="Icon.80x80" DefaultValue="https://github.com/FOOllie/FOAddIn/blob/main/assets/icon-80.png?raw=true"/>
 			</bt:Images>
 			<bt:Urls>
-				<bt:Url id="Taskpane.Url" DefaultValue="https://raw.githubusercontent.com/FOOllie/FOAddIn/main/FO%20Add%20In/taskpane.html"/>
+				<bt:Url id="Taskpane.Url" DefaultValue="https://raw.githubusercontent.com/FOOllie/FOAddIn/main/taskpane.html"/>
 			</bt:Urls>
 			<bt:ShortStrings>
 				<bt:String id="CommandsGroup.Label" DefaultValue="Forward Solutions Add In Add-in"/>
